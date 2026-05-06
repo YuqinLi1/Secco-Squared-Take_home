@@ -22,18 +22,16 @@ export async function submitLead(formData: FormData) {
       return { error: error.message };
     }
 
+    // test webhook
     try {
-      const res = await fetch(
-        "https://webhook-receiver-flax.vercel.app/api/lead-webhook",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-Candidate-Name": "Yuqin Li",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      const res = await fetch("https://httpstat.us/500", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Candidate-Name": "Yuqin Li",
+        },
+        body: JSON.stringify(data),
+      });
       if (!res.ok) console.error("Webhook status error:", res.status);
     } catch (err) {
       console.error("Webhook network error:", err);
