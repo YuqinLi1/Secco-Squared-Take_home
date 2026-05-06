@@ -14,6 +14,7 @@ export async function submitLead(formData: FormData) {
     },
   ]);
 
+  // deal with error
   if (error) throw new Error(error.message);
 
   fetch("https://webhook-receiver-flax.vercel.app/api/lead-webhook", {

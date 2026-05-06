@@ -9,6 +9,7 @@ const supabaseAdmin = createClient(
 );
 
 export default async function LeadsPage() {
+  //Sorted by most recent first
   const { data: leads, error } = await supabaseAdmin
     .from("leads")
     .select("*")
