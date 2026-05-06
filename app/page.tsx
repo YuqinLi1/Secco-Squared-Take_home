@@ -11,16 +11,15 @@ export default function Home() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
-    setErrorMessage("");
 
     const formData = new FormData(e.currentTarget);
+    const result = await submitLead(formData);
 
-    try {
-      await submitLead(formData);
-      setStatus("success");
-    } catch (error: any) {
+    if (result.error) {
       setStatus("error");
-      setErrorMessage(error.message || "Submission failed.");
+      setErrorMessage(result.error); // show duplicate email or network failure
+    } else {
+      setStatus("success");
     }
   }
 
