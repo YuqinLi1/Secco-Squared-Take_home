@@ -26,12 +26,12 @@ Open http://localhost:3000 in your browser.
 
 You will need a Supabase project with a leads table. Add the following to your .env.local file:
 
-# Public variables for client-side operations (Insert)
+Public variables for client-side operations (Insert)
 
 NEXT_PUBLIC_SUPABASE_URL=https://froziylpbgoopaiyjvbr.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZyb3ppeWxwYmdvb3BhaXlqdmJyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwMjM0MjYsImV4cCI6MjA5MzU5OTQyNn0.8nZwQPPkk60NDidBxB00Yflwv--D5WKa88-qsoNd0hI
 
-# Private variable for server-side operations (Bypassing RLS for /leads)
+Private variable for server-side operations (Bypassing RLS for /leads)
 
 SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZyb3ppeWxwYmdvb3BhaXlqdmJyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3ODAyMzQyNiwiZXhwIjoyMDkzNTk5NDI2fQ.XzXjp9QmnGZnjZ2MUIf0IjhZmI8JBgjM2V24_0yvJTs
 
